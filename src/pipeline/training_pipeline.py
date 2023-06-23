@@ -61,4 +61,4 @@ def start_training_pipeline():
         raise CustomException(e,sys)
     
 
-start_training_pipeline()
+#start_training_pipeline()
