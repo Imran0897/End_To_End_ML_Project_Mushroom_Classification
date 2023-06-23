@@ -1,0 +1,149 @@
+data_drift_within_test_dataset:
+  bruises:
+    pvalues: 2.3915526087003792e-27
+    same_distribution: false
+  cap_color:
+    pvalues: 4.516167449803714e-07
+    same_distribution: false
+  cap_shape:
+    pvalues: 0.008676619297960498
+    same_distribution: false
+  cap_surface:
+    pvalues: 6.797270570872742e-07
+    same_distribution: false
+  class:
+    pvalues: 1.3618363295755143e-13
+    same_distribution: false
+  gill_attachment:
+    pvalues: 0.6507642041848872
+    same_distribution: true
+  gill_color:
+    pvalues: 2.464920693381909e-44
+    same_distribution: false
+  gill_size:
+    pvalues: 1.674173997911399e-30
+    same_distribution: false
+  gill_spacing:
+    pvalues: 0.4485778068022262
+    same_distribution: true
+  habitat:
+    pvalues: 1.6268155917797267e-15
+    same_distribution: false
+  index:
+    pvalues: 6.444483610421189e-63
+    same_distribution: false
+  odor:
+    pvalues: 7.530701924604724e-18
+    same_distribution: false
+  population:
+    pvalues: 1.8471596451031865e-05
+    same_distribution: false
+  ring_number:
+    pvalues: 0.01370936901959355
+    same_distribution: false
+  ring_type:
+    pvalues: 1.0249337450617055e-35
+    same_distribution: false
+  spore_print_color:
+    pvalues: 6.243776044302822e-65
+    same_distribution: false
+  stalk_color_above_ring:
+    pvalues: 0.00375078578925542
+    same_distribution: false
+  stalk_color_below_ring:
+    pvalues: 0.0024558886733632656
+    same_distribution: false
+  stalk_root:
+    pvalues: 2.705149177800505e-82
+    same_distribution: false
+  stalk_shape:
+    pvalues: 0.3099535708182481
+    same_distribution: true
+  stalk_surface_above_ring:
+    pvalues: 0.05103336406418156
+    same_distribution: true
+  stalk_surface_below_ring:
+    pvalues: 0.02222000488628189
+    same_distribution: false
+  veil_color:
+    pvalues: 0.6273258640965281
+    same_distribution: true
+  veil_type:
+    pvalues: 1.0
+    same_distribution: true
+data_drift_within_train_dataset:
+  bruises:
+    pvalues: 2.9343529713890066e-51
+    same_distribution: false
+  cap_color:
+    pvalues: 9.830086428981896e-19
+    same_distribution: false
+  cap_shape:
+    pvalues: 2.5243734022621595e-08
+    same_distribution: false
+  cap_surface:
+    pvalues: 8.18617087166828e-26
+    same_distribution: false
+  class:
+    pvalues: 7.261497270082349e-23
+    same_distribution: false
+  gill_attachment:
+    pvalues: 0.1031480647425721
+    same_distribution: true
+  gill_color:
+    pvalues: 1.092104608587687e-128
+    same_distribution: false
+  gill_size:
+    pvalues: 2.1462089013702844e-86
+    same_distribution: false
+  gill_spacing:
+    pvalues: 0.29157586654956286
+    same_distribution: true
+  habitat:
+    pvalues: 1.8604629398349794e-34
+    same_distribution: false
+  index:
+    pvalues: 2.1896466837262095e-173
+    same_distribution: false
+  odor:
+    pvalues: 2.456113447089864e-51
+    same_distribution: false
+  population:
+    pvalues: 1.5642903105244926e-21
+    same_distribution: false
+  ring_number:
+    pvalues: 1.3454033827598832e-07
+    same_distribution: false
+  ring_type:
+    pvalues: 1.0087376237528808e-103
+    same_distribution: false
+  spore_print_color:
+    pvalues: 3.0392004602062847e-193
+    same_distribution: false
+  stalk_color_above_ring:
+    pvalues: 1.466976772524262e-13
+    same_distribution: false
+  stalk_color_below_ring:
+    pvalues: 1.1237002631532029e-13
+    same_distribution: false
+  stalk_root:
+    pvalues: 2.530959722438992e-239
+    same_distribution: false
+  stalk_shape:
+    pvalues: 1.2300244261649475e-10
+    same_distribution: false
+  stalk_surface_above_ring:
+    pvalues: 0.015610499754597182
+    same_distribution: false
+  stalk_surface_below_ring:
+    pvalues: 0.042622408518306794
+    same_distribution: false
+  veil_color:
+    pvalues: 0.07661476503204917
+    same_distribution: true
+  veil_type:
+    pvalues: 1.0
+    same_distribution: true
+missing_values_within_base_dataset: []
+missing_values_within_test_dataset: []
+missing_values_within_train_dataset: []

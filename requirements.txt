@@ -1,4 +1,13 @@
 pandas
 numpy
 seaborn
+scikit-learn
+autoimpute
+xgboost
+cassandra-driver
+python-dotenv==0.21.0
+PyYAML
+autoimpute
+dill==0.3.5.1
+xgboost
 -e .
