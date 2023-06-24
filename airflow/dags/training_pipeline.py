@@ -13,7 +13,7 @@ with DAG(
     # [END default_args]
     description='Mushroom classification',
     schedule_interval="@weekly",
-    start_date=pendulum.datetime(2023, 07, 07, tz="UTC"),
+    start_date=pendulum.datetime(2023,06 , 24, tz="UTC"),
     catchup=False,
     tags=['example'],
 ) as dag:

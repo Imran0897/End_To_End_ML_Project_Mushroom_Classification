@@ -8,12 +8,12 @@ from airflow.operators.python import PythonOperator
 
 
 with DAG(
-    'sensor_training',
+    'mushroom_batch',
     default_args={'retries': 2},
     # [END default_args]
-    description='Sensor Fault Detection',
+    description='mushooms_batch prediction',
     schedule_interval="@weekly",
-    start_date=pendulum.datetime(2022, 12, 11, tz="UTC"),
+    start_date=pendulum.datetime(2023, 06, 24, tz="UTC"),
     catchup=False,
     tags=['example'],
 ) as dag:
