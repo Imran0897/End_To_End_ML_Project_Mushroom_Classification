@@ -3,7 +3,7 @@ from src.exception import CustomException
 from src.logger import logging
 import os,sys 
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import LabelEncoder,LabelEncoder
 from sklearn.preprocessing import OneHotEncoder 
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
@@ -62,8 +62,8 @@ class DataTransformation:
             test_df = pd.read_csv(self.data_ingestion_artifact.test_file_path)
             # print(train_df.isnull().sum())
             # print(test_df.isnull().sum())
-            # train_df.replace(to_replace="?",value=np.nan,inplace=True)
-            # test_df.replace(to_replace="?",value=np.nan,inplace=True)
+            train_df.replace(to_replace="?",value=np.nan,inplace=True)
+            test_df.replace(to_replace="?",value=np.nan,inplace=True)
             # train_df["stalk_root"] =train_df["stalk_root"].replace('?',np.nan)
             # test_df["stalk_root"] =test_df["stalk_root"].replace('?',np.nan)
             # train_df.replace({"?",np.nan},inplace=True)
@@ -89,13 +89,13 @@ class DataTransformation:
             print(target_feature_test_arr)
 
             #simple_imputer = SingleImputer(strategy='categorical')
-            # simple_imputer= SimpleImputer(strategy='most_frequent')
-            # logging.info(f"simple imputer")
-            # #simple_imputer.fit_transform(input_feature_train_df)
-            # logging.info(f"simple imputer finish")
+            simple_imputer= SimpleImputer(strategy='most_frequent')
+            logging.info(f"simple imputer")
+            simple_imputer.fit_transform(input_feature_train_df)
+            logging.info(f"simple imputer finish")
 
-            # input_feature_train_df =simple_imputer.fit_transform(input_feature_train_df)
-            # input_feature_test_df= simple_imputer.fit_transform(input_feature_test_df)
+            input_feature_train_df =simple_imputer.fit_transform(input_feature_train_df)
+            input_feature_test_df= simple_imputer.fit_transform(input_feature_test_df)
 
 
             one_hot_encoder = OneHotEncoder(drop='first',handle_unknown='ignore')

@@ -1,0 +1,149 @@
+data_drift_within_test_dataset:
+  bruises:
+    pvalues: 0.9822799952417884
+    same_distribution: true
+  cap_color:
+    pvalues: 0.9810074784223598
+    same_distribution: true
+  cap_shape:
+    pvalues: 0.9999729162963259
+    same_distribution: true
+  cap_surface:
+    pvalues: 1.0
+    same_distribution: true
+  class:
+    pvalues: 1.0
+    same_distribution: true
+  gill_attachment:
+    pvalues: 1.0
+    same_distribution: true
+  gill_color:
+    pvalues: 0.994742751332604
+    same_distribution: true
+  gill_size:
+    pvalues: 1.0
+    same_distribution: true
+  gill_spacing:
+    pvalues: 1.0
+    same_distribution: true
+  habitat:
+    pvalues: 0.38792511141463126
+    same_distribution: true
+  index:
+    pvalues: 0.5952078825511286
+    same_distribution: true
+  odor:
+    pvalues: 0.9999999957491488
+    same_distribution: true
+  population:
+    pvalues: 0.9991157568171476
+    same_distribution: true
+  ring_number:
+    pvalues: 1.0
+    same_distribution: true
+  ring_type:
+    pvalues: 1.0
+    same_distribution: true
+  spore_print_color:
+    pvalues: 0.9964156289456293
+    same_distribution: true
+  stalk_color_above_ring:
+    pvalues: 0.9987658938691908
+    same_distribution: true
+  stalk_color_below_ring:
+    pvalues: 0.9990064506831309
+    same_distribution: true
+  stalk_root:
+    pvalues: 0.9999973755900711
+    same_distribution: true
+  stalk_shape:
+    pvalues: 0.7099008517797324
+    same_distribution: true
+  stalk_surface_above_ring:
+    pvalues: 0.9999999999999896
+    same_distribution: true
+  stalk_surface_below_ring:
+    pvalues: 0.9999999474644138
+    same_distribution: true
+  veil_color:
+    pvalues: 0.9999999999995328
+    same_distribution: true
+  veil_type:
+    pvalues: 1.0
+    same_distribution: true
+data_drift_within_train_dataset:
+  bruises:
+    pvalues: 0.9999999999999717
+    same_distribution: true
+  cap_color:
+    pvalues: 0.9999999999999557
+    same_distribution: true
+  cap_shape:
+    pvalues: 1.0
+    same_distribution: true
+  cap_surface:
+    pvalues: 1.0
+    same_distribution: true
+  class:
+    pvalues: 1.0
+    same_distribution: true
+  gill_attachment:
+    pvalues: 1.0
+    same_distribution: true
+  gill_color:
+    pvalues: 1.0
+    same_distribution: true
+  gill_size:
+    pvalues: 1.0
+    same_distribution: true
+  gill_spacing:
+    pvalues: 1.0
+    same_distribution: true
+  habitat:
+    pvalues: 0.9991571197390736
+    same_distribution: true
+  index:
+    pvalues: 0.9999673407705751
+    same_distribution: true
+  odor:
+    pvalues: 1.0
+    same_distribution: true
+  population:
+    pvalues: 1.0
+    same_distribution: true
+  ring_number:
+    pvalues: 1.0
+    same_distribution: true
+  ring_type:
+    pvalues: 1.0
+    same_distribution: true
+  spore_print_color:
+    pvalues: 1.0
+    same_distribution: true
+  stalk_color_above_ring:
+    pvalues: 1.0
+    same_distribution: true
+  stalk_color_below_ring:
+    pvalues: 1.0
+    same_distribution: true
+  stalk_root:
+    pvalues: 1.0
+    same_distribution: true
+  stalk_shape:
+    pvalues: 0.9999971104551066
+    same_distribution: true
+  stalk_surface_above_ring:
+    pvalues: 1.0
+    same_distribution: true
+  stalk_surface_below_ring:
+    pvalues: 1.0
+    same_distribution: true
+  veil_color:
+    pvalues: 1.0
+    same_distribution: true
+  veil_type:
+    pvalues: 1.0
+    same_distribution: true
+missing_values_within_base_dataset: []
+missing_values_within_test_dataset: []
+missing_values_within_train_dataset: []

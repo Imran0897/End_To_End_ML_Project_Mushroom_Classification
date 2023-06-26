@@ -9,7 +9,6 @@ import dill
 
 def get_collection_as_dataframe(database_name:str)->pd.DataFrame:
     
-
     try:
         logging.info(f"Reading data from database : {database_name} using key_space {env_var.key_space}")
         session = cassandra_client.connect() 

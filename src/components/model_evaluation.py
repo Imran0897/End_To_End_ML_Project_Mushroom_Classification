@@ -62,14 +62,13 @@ class ModelEvaluation:
             current_model  = load_object(file_path=self.model_trainer_artifact.model_path)
             current_target_encoder = load_object(file_path=self.data_transformation_artifact.target_encoder_path)
             
-
-
             test_df = pd.read_csv(self.data_ingestion_artifact.test_file_path)
             target_df = test_df[TARGET_COLUMN]
+            input_feature_name = test_df.drop(columns=['class','index']).columns
             y_true =target_encoder.transform(target_df)
             # accuracy using previous trained model
-            print(list(transformer.feature_names_in_))
-            input_feature_name = list(transformer.feature_names_in_)
+            #print(list(transformer.feature_names_in_))
+            #input_feature_name = list(transformer.feature_names_in_)
             input_arr =transformer.transform(test_df[input_feature_name])
             y_pred = model.predict(input_arr)
             print(f"Prediction using previous model: {target_encoder.inverse_transform(y_pred[:5])}")
@@ -77,7 +76,7 @@ class ModelEvaluation:
             logging.info(f"Accuracy using previous trained model: {previous_model_score}")
            
             # accuracy using current trained model
-            input_feature_name = list(current_transformer.feature_names_in_)
+            #input_feature_name = list(current_transformer.feature_names_in_)
             input_arr =current_transformer.transform(test_df[input_feature_name])
             y_pred = current_model.predict(input_arr)
             y_true =current_target_encoder.transform(target_df)

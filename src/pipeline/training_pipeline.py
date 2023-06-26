@@ -16,17 +16,21 @@ def start_training_pipeline():
         training_pipeline_config = config_entity.TrainingPipelineConfig()
 
         #data ingestion
+
+        logging.info(f"Data Ingestion started")
         data_ingestion_config  = config_entity.DataIngestionConfig(training_pipeline_config=training_pipeline_config)
         print(data_ingestion_config.to_dict())
         data_ingestion = DataIngestion(data_ingestion_config=data_ingestion_config)
         data_ingestion_artifact = data_ingestion.initiate_data_ingestion()
-        
+        logging.info(f"Data Ingestion done and now Data Validation started")
+
         #data validation
         data_validation_config = config_entity.DataValidationConfig(training_pipeline_config=training_pipeline_config)
         data_validation = DataValidation(data_validation_config=data_validation_config,
                         data_ingestion_artifact=data_ingestion_artifact)
         
         data_validation.initiate_data_validation()
+        logging.info(f"Data validation done and now Data transformation started")
         #data_validation_artifact = data_validation.initiate_data_validation()
 
         #data transformation
@@ -34,12 +38,13 @@ def start_training_pipeline():
         data_transformation = DataTransformation(data_transformation_config=data_transformation_config, 
         data_ingestion_artifact=data_ingestion_artifact)
         data_transformation_artifact = data_transformation.initiate_data_transformation()
+        logging.info(f"Data transformation done and now Model Trainer started")
 
-    #model trainer
+        #model trainer
         model_trainer_config = config_entity.ModelTrainerConfig(training_pipeline_config=training_pipeline_config)
         model_trainer = ModelTrainer(model_trainer_config=model_trainer_config, data_transformation_artifact=data_transformation_artifact)
         model_trainer_artifact = model_trainer.initiate_model_trainer()
-
+        logging.info(f"Model Trainer done and now evaluation started")
         #model evaluation
         model_eval_config = config_entity.ModelEvaluationConfig(training_pipeline_config=training_pipeline_config)
         model_eval  = ModelEvaluation(model_eval_config=model_eval_config,
@@ -47,7 +52,7 @@ def start_training_pipeline():
         data_transformation_artifact=data_transformation_artifact,
         model_trainer_artifact=model_trainer_artifact)
         model_eval_artifact = model_eval.initiate_model_evaluation()
-
+        logging.info(f"Model evaluation done and now evaluation started")
         #model pusher
         model_pusher_config = config_entity.ModelPusherConfig(training_pipeline_config)
         
@@ -56,9 +61,9 @@ def start_training_pipeline():
                 model_trainer_artifact=model_trainer_artifact)
 
         model_pusher_artifact = model_pusher.initiate_model_pusher()
-        
+        logging.info(f"Model evaluation done")
     except Exception as e:
         raise CustomException(e,sys)
     
 
-#start_training_pipeline()
+start_training_pipeline()

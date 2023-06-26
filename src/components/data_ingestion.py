@@ -28,8 +28,8 @@ class DataIngestion:
             logging.info("Save data in feature store")
 
             #replace ? with Nan
-            df.replace(to_replace="?",value=np.nan,inplace=True)
-            df.dropna(inplace=True)
+            #df.replace(to_replace="?",value=np.nan,inplace=True)
+            # df.dropna(inplace=True)
             # df.replace({"?":},inplace=True)
 
             #Save data in feature store
